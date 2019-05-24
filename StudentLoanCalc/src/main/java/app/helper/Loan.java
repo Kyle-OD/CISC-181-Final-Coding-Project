@@ -53,6 +53,24 @@ public class Loan {
 		return tot;
 	}
 	
+	public double sumInterest() {
+		double tot = 0;
+		for(Payment i:paymentList) {
+			tot+=i.getiPayment();
+		}
+		return tot;
+	}
+	
+	
+	public double sumPrinciple() {
+		double tot = 0;
+		for(Payment i:paymentList) {
+			tot+=i.getpPayment();
+		}
+		return tot;
+	}
+	
+	
 	public double totalInterestPayed() {
 		return this.sumPayments()-this.loanAmount;
 	}
